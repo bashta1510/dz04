@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css?family=Risque');
+@import url('https://fonts.googleapis.com/css?family=Kavivanar');
+@import url('https://fonts.googleapis.com/css?family=Monoton');
+
+html{
+	margin: 0;
+	padding: 0;
+}
+body{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	text-decoration:none;
+	margin:auto;
+    width: 100%;
+	height:100%;
+	max-width: 1200px;
+	
+}
+
+h3{
+	font-family: Risque, Arial;
+	font-size: 20pt;
+
+}
+a:link { 
+	font-weight: bold; 
+	text-decoration: none; 
+	color: black;
+	font-family: Risque;
+	}
+a:hover, a:focus, a:active { 
+	text-decoration: none; 
+	color: red;
+	}
+abbr {
+	text-decoration: none;
+	border-bottom: none;
+	}
+li{
+	list-style: none;
+}
+
+p{
+	font-size: 12pt;
+	font-family: Kavivanar;
+	font-weight: bold;
+}
+
+.page-wrapper{
+	background: url(https://images.sharefaith.com/images/img/3/FreeTwitterBackgrounds/FreeTwitterBackgrounds/bg8large.jpg);
+	background-position: center center;
+	background-size: cover;
+	display: grid;
+	grid-template-columns: 33% 34% 33%;
+  	grid-template-rows: 33% 33% 34%;
+  	grid-gap: 10px;
+ 	grid-auto-rows: minmax(100px, auto);
+}	
+/*============Section===========*/
+section{
+	display: grid;
+	grid-template-columns: 20% 20% 20% 20% 20%;
+  	grid-template-rows: 20% 20% 20% 20% 20%;
+}
+
+header{
+	grid-column: 1 / 5;
+  	grid-row: 1;
+  	color: #424242;
+  	height: 200px;
+}
+
+header h1{
+	font-size: 40pt;
+	font-family: Monoton;
+}
+
+header h2{
+	font-size: 20pt;
+	font-family: Risque;
+}
+
+
+.summary{
+	grid-column: 1 / 6;
+	grid-row: 2;
+}
+
+.preamble{
+	grid-area: 3 / 1 / span 6 / span 6;
+	}
+/*=================Main_content======================*/
+
+.main{
+	display: grid;
+	grid-template-columns: 40% 10% 40%;
+	grid-template-rows: 20% 20% 20% 20% 20%;
+	
+}
+
+.explanation{
+	grid-column: 1;
+	grid-row: 1;
+}
+
+.participation{
+	grid-column: 3;
+}
+
+.benefits{
+	grid-area: 2 / 1 /span 2 /span 3;
+}
+
+.requirements{
+grid-area: 4 / 1 /span 2 /span 5;
+}
+
+footer{
+	 grid-area: 6 / 1 / span 5 / span 6;
+	 display: flex;
+	 justify-content: space-around;
+	 height: 40px;
+}
+
+footer a:link, footer a:visited{
+	text-decoration: none;
+}
+
+/*==============Aside======================*/
+aside{
+	display: grid;
+}
+
+/*===================icons=================*/
+
+
+.zen-validate-html{
+	
+}
+.zen-validate-css{
+
+}
+.zen-license{
+
+}
+.zen-accessibility{
+
+}
+.zen-github{
+
+}
+/*===========Mobile============*/
+@media only screen and (max-width: 500px){
+	p{
+		font-size: 10pt;
+	}
+	.page-wrapper{
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		grid-gap: 10px;
+	}
+
+	.section{
+		display: grid;
+		grid-template-columns: 20% 20% 20% 20% 20%;
+  		grid-template-rows: 20% 20% 20% 20% 20%;
+	}
+
+	header{
+	grid-column: 2 / 5;
+  	grid-row: 1;
+  	color: #424242;
+  	height: 200px;
+	}
+
+	header h1{
+		font-size: 20pt;
+		font-family: Monoton;
+		background-size: cover;
+	}
+
+	header h2{
+		font-size: 14pt;
+		font-family: Risque;
+	}
+	.main{
+	display: grid;
+	grid-template-columns: 40% 10% 40%;
+	grid-template-rows: 20% 20% 20% 20% 20%;
+	}
+	.explanation{
+	grid-area: 1 / 1 /span 1 /span 6;
+	}
+
+	.participation{
+	grid-area: 2 / 1 /span 1 /span 6;
+	}
+	.benefits{
+	grid-area: 3 / 1 /span 1 /span 6;
+	}
+
+	.requirements{
+	grid-area: 4 / 1 /span 1 /span 6;
+	}
+	footer{
+ 	grid-area: 5 / 1 / span 1 / span 6;
+ }
+}
